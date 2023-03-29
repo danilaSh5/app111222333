@@ -45,6 +45,38 @@ function topThreeWords(text) {
   arrayOfCorrectSymbols = arrayOfCorrectSymbols.filter(
     (element) => element.length > 0
   );
+  let mainObjeckt =[];
+  while (arrayOfCorrectSymbols.length >= 0){
+    arrayOfCorrectSymbols.forEach(element => {
+      mainObjeckt.push(arrayOfCorrectSymbols.filter((item, index) => {
+        if (item === element){
+          arrayOfCorrectSymbols.slice(index,1);
+          return true
+        }
+      }))
+      })
+    };
+    console.log(mainObjeckt)
+  }
+
+
+
+
+
+  // let mainObjeckt = {};
+  // for (let i = 0; i < arrayOfCorrectSymbols.length; i++) {
+  //   mainObjeckt[arrayOfCorrectSymbols[i]] = 0;
+  //   arrayOfCorrectSymbols.forEach(item => {
+  // //     if (item === arrayOfCorrectSymbols[i]){mainObjeckt[arrayOfCorrectSymbols[i]]++}
+  //   });
+    
+  }
+
+}
+
+
+
+
 
   let mainObjeckt2_0 = {};
   let mainObjeckt3_0 = {};
@@ -97,3 +129,7 @@ let a = [
   ["e", "e"],
   ["e", "e"],
 ];
+
+let a = {};
+let b = 'asd';
+a[b]+= 1;
